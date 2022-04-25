@@ -1,37 +1,69 @@
 <body>
-  <div class="top-bar">
-      <h1>
-          My Forum
-      </h1>
-  </div>
-  <div class="main">
-      <div class="header">
-      </div>
-      <textarea></textarea>
-      <button>add comment</button>
-      <div class="comments">
-      </div>
-  </div>
-  <script src="data.js"></script>
-  <script>
-      var id = window.location.search.slice(1);
-      var thread = threads.find(t => t.id == id);
-      var header = document.querySelector('.header');
-      var headerHtml = `
-          <h4 class="title">
-              ${thread.title}
-          </h4>
-          <div class="bottom">
-              <p class="timestamp">
-                  ${new Date(thread.date).toLocaleString()}
-              </p>
-              <p class="comment-count">
-                  ${thread.comments.length} comments
-              </p>
-          </div>
-      `
-      header.insertAdjacentHTML('beforeend', headerHtml)
-
+    <div class="top-bar">
+        <h1>
+            My Forum
+        </h1>
+    </div>
+   
+    <div class="main">
+            <h4 class="title">
+            Thread 1
+            </h4 >
+        
+        <textarea></textarea>
+        <button >add comment</button>
+        <div class="comments">
+            <div class="comment">
+                <div class="top-comment">
+                    <p class="user">
+                        Kr1s4an
+                    </p>
+                    <p class="comment-ts">
+                        10/10/2020
+                    </p>
+                </div>
+                <div class="comment-content">
+                    Comment text here
+                </div>
+            </div>
+        </div>
+    </div>
+        <style>
+            body{
+              margin: 10px 60px;
+            }
+            a {
+              text-decoration: none;
+              color:black;
+            }
+            h1, h4, ol {
+              margin: 0;
+            }
+            p {
+              margin: 5px 0;
+            }
+            textarea{
+                width: 80%;
+                height: 80px;
+            }
+            button{
+                display:block;
+                margin: 10px 0;
+            }
+            .top-bar{
+              background-color: skyblue;
+              padding: 0 40px;
+            }
+            .timestamp {
+              padding-right: 10px;
+            }
+            .main {
+              background-color: #F6F6EF;
+              padding: 10px 15px
+            }
+            .comments {
+                margin: 40px 0;
+              
       function addComment(comment) {
           var commentHtml = `
               <div class="comment">
