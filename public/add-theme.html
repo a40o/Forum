@@ -1,4 +1,20 @@
+<!DOCTYPE html>
+<Head>
+    <title>                
+        Adding theme
+    </title>
+</Head>
+
 <body>
+      <!-- Firebase App -->
+  <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
+  <!-- Firestore -->
+  <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-firestore.js"></script>
+  <!-- Your custom JS file -->
+  <script src="index.js"></script>
+
+    <script src = "data.js"></script>
+
     <div class="main">
         <h1>
             Adding theme
@@ -7,18 +23,18 @@
         <p class="theme">
             The name of the theme
         </p>
-        <textarea class="textarea-theme"></textarea>
+        <textarea class="textarea-theme" id = "themeName"></textarea>
         <p class="description">
             Add Description
         </p>
-        <textarea class="textarea-description"></textarea>
+        <textarea class="textarea-description" id = "description"></textarea>
         <p class="name">
             Your name
         </p>
-        <textarea class="textarea-name"></textarea>
+        <textarea class="textarea-name" id = "name"></textarea>
         <br>
             <div class="btn">
-            <button>
+            <button id = "submit">
                 Public
             </button>
             </div>
@@ -71,5 +87,6 @@
             text-align: center;
         }
     </style>
+  <script src = "main.js"></script>
 
 </body>

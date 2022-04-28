@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+    <title>Forum</title>
 
     <!-- update the version number as needed -->
     <script defer src="/__/firebase/9.6.11/firebase-app-compat.js"></script>
@@ -25,17 +25,23 @@
 
   </head>
   <body>
-    <div class="top-bar">
-        <h1>
-            My Forum
-        </h1>
-    </div>
-    <div class="main">
-        <ol>
-        </ol>
-    </div>
-    <script src="data.js"></script>
+      <!-- Firebase App -->
+      <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
+      <!-- Firestore -->
+      <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-firestore.js"></script>
+      <!-- Your custom JS file -->
+      <script src="index.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src = "data.js"></script>
     <script>
+      console.log(threads);
+      var container = document.querySelector('ol');
+      for (let thread of threads){
+        var html = 'row html'
+      }
+
+      container.insertAdjacentHTML('beforeend', html)
         console.log(threads);
         var container = document.querySelector('ol');
         for (let thread of threads) {
@@ -59,7 +65,7 @@
             container.insertAdjacentHTML('beforeend', html);
         }
     </script>
-    <a href="/item">
+    <a href="add-theme.html">
     <div class="new-themе">
       <h3 class="add">
         Add new theme
@@ -74,7 +80,7 @@
   <div class="main">
     <ol>
         <li class="row">
-            <a href="/item">
+            <a href="thread.html">
             <h4 class="title">
             Thread 1
             </h4 >
@@ -91,7 +97,7 @@
     </ol>
     <ol>
       <li class="row">
-          <a href="/item">
+          <a href="thread.html">
           <h4 class="title">
           Thread 2
           </h4 >
@@ -148,5 +154,8 @@
     }
     
   </style>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+
+  <script type = "module" src = "main.js"></script>
   </body>
 </html>
